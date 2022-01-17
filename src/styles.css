@@ -1,0 +1,55 @@
+:root {
+  --primary-color: rgb(180, 18, 108);
+  --secondary-color: rgb(240, 187, 219);
+  --background-color: rgb(240, 218, 233);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Helvetica;
+}
+
+table {
+  width: 800px;
+  border: 4px solid var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+th {
+  font-size: 125%;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+}
+
+h1,
+h3,
+th {
+  color: var(--primary-color);
+}
+
+.rank {
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.example,
+.text-example {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.selected-text {
+  background: var(--background-color);
+}
+
+.text-example {
+  background: var(--secondary-color);
+}
+
+li {
+  list-style: square;
+}

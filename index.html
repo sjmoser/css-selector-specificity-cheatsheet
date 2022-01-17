@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>CSS Selectors & Specificity Cheat Sheet Project</title>
+  </head>
+  <body>
+    <h1>CSS Selectors & Specificity</h1>
+    <h2>Types of Selectors</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Specificity Rank</th>
+          <th>CSS Selector Type</th>
+          <th>Examples</th>
+          <th>CSS Selector Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rank">1</td>
+          <td>ID Selectors</td>
+          <td class="example"><span class="selected-text">#caramel, #body p</span></td>
+          <td>Can target ONLY ONE item, hence is the most specific</td>
+        </tr>
+        <tr>
+          <td class="rank">2</td>
+          <td>Class Selectors (.), Attribute Selectors, and Pseudo-classes(</td>
+          <td class="example"><span class="selected-text">.beverages, [type="radio"], :hover</span></td>
+          <td>Can target multiple items with the same class name</td>
+        </tr>
+        <tr>
+          <td class="rank">3</td>
+          <td>Type Selectors and Pseudo-elements</td>
+          <td class="example"><span class="selected-text">h1, :before</span></td>
+          <td>Can target in a general way (i.e. EVERY p, h3, etc.)</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>CSS Rules Cascade</h2>
+    <h3>Last Rule</h3>
+    <p>
+      If there are two <em>identical</em> selectors (i.e. <span class="text-example">color: green</span>, <span class="text-example">color: red</span>),
+      the <strong>latter</strong> of the two will be the rule that applies (and hence appears).
+    </p>
+    <h3>Specificity</h3>
+    <p>
+      The <strong>most specific</strong> selector is an id (#), therefore if there are class and
+      id selectors attempting to target the same item, the id selector will "win
+      out" over the class selector.  Examples from HTML & CSS, pg. 239:
+      <ul>
+          <li><span class="text-example">h1</span> is <em>more specific</em> than <span class="text-example">*</span></li>
+          <li><span class="text-example">p b</span> is <em>more specific</em>  than <span class="text-example">p</span></li>
+          <li><span class="text-example">p#intro</span> is <em>more specific</em>  than <span class="text-example">p</span></li>
+      </ul> 
+    </p>
+    <h3>Important</h3>
+    <p>By adding <span class="text-example">!important</span> after a property value, you're telling the CSS to treat that item as more important than other rules applying to the same element. </p>
+  </body>
+</html>
